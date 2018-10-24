@@ -1,0 +1,31 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 20px; }
+  .checkout__shipping {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px; }
+    .checkout__shipping .button {
+      float: left;
+      width: 100px;
+      height: 40px;
+      font-weight: bold;
+      font-size: 17px; }
+    .checkout__shipping select {
+      height: 31px;
+      width: 45.9%;
+      margin-right: 10px;
+      margin-bottom: 10px; }
+    .checkout__shipping input {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      height: 25px;
+      width: 45%; }
+
+.summary {
+  margin: 20px; }
+
+/*# sourceMappingURL=Checkout.css.map */

@@ -1,0 +1,38 @@
+.container
+    width: 66%
+    border: 1px solid rgb(184, 182, 182)
+    margin: auto
+    display: flex
+    padding: 10px 
+    justify-content: space-between
+
+.cart
+    width: 66%
+    display: flex
+    flex-direction: column
+    text-align: left
+    &__header 
+        font-size: 20px
+        line-height: 20px
+        margin: 0
+    &__products
+        &-item
+            display: flex
+            align-items: flex-start
+            font-size: 20px
+            padding: 5px
+            border-bottom: 1px solid rgb(184, 182, 182)
+            img
+                max-width: 150px
+            &-info
+                padding-left: 10px
+            .delete-button
+                margin-top: 50px
+                background-color: red
+                float: left
+                border-color: red
+                font-size: 14px
+                align-self: flex-end
+                &:hover
+                    border-color: rgb(153, 7, 7)
+
