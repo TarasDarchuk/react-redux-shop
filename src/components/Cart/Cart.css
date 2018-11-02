@@ -24,14 +24,15 @@
     .cart__products-item img {
       max-width: 150px; }
     .cart__products-item-info {
-      padding-left: 10px; }
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column; }
     .cart__products-item .delete-button {
-      margin-top: 50px;
       background-color: red;
-      float: left;
       border-color: red;
       font-size: 14px;
-      align-self: flex-end; }
+      width: fit-content;
+      margin-bottom: 5px; }
       .cart__products-item .delete-button:hover {
         border-color: #990707; }
 

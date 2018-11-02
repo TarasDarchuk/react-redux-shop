@@ -54,21 +54,25 @@ class Summary extends Component {
             </span>
           </b>
         </div>
-        <div className="summary__line-break" />
-        <div className="summary__div">
-          <Link
-            className={
-              this.props.state.length > 0
-                ? "summary__div-link"
-                : "summary__div-link-disabled"
-            }
-            to={this.props.state.length > 0 ? "/checkout" : "/cart"}
-          >
-            <span>
-              <b>CHECKOUT</b>
-            </span>
-          </Link>
-        </div>
+        {this.props.checkout ? (
+          <div>
+            <div className="summary__line-break" />
+            <div className="summary__div">
+              <Link
+                className={
+                  this.props.state.length > 0
+                    ? "summary__div-link"
+                    : "summary__div-link-disabled"
+                }
+                to={this.props.state.length > 0 ? "/checkout" : "/cart"}
+              >
+                <span>
+                  <b>CHECKOUT</b>
+                </span>
+              </Link>
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   }

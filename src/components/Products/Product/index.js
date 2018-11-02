@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Product.css";
 
 import { connect } from "react-redux";
-import { addToCart } from "../../actions/index";
+import { addToCart } from "../../../actions/index";
 
 class Product extends Component {
   constructor(props) {

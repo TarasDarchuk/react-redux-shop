@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Cart.css";
-import Summary from "../Summary/Summary";
+import CartProduct from "./CartProduct";
+import Summary from "../Summary";
 //redux
 import { deleteFromCart } from "../../actions/index";
 import { connect } from "react-redux";
@@ -12,30 +13,23 @@ class Cart extends Component {
   };
 
   render() {
+    const { state } = this.props;
     return (
       <div className="container">
         <div className="cart">
           <div className="cart__header">
-            <h3>YOUR CART ({this.props.state.length})</h3>
+            <h3>YOUR CART ({state.length})</h3>
           </div>
           <div className="cart__products">
-            {this.props.state.length > 0 ? (
-              this.props.state.map(item => (
-                <div className="cart__products-item" key={item.id}>
-                  <img src={item.image} alt={item.model} />
-                  <div className="cart__products-item-info">
-                    <div>
-                      <b>{item.model}</b>
-                    </div>
-                    <div>${item.price}</div>
-                    <div
-                      className="button delete-button"
-                      onClick={() => this.deleteFromCart(item.id)}
-                    >
-                      Delete
-                    </div>
-                  </div>
-                </div>
+            {state.length > 0 ? (
+              state.map(product => (
+                <CartProduct
+                  key={product.id}
+                  model={product.model}
+                  image={product.image}
+                  price={product.price}
+                  delete={() => this.deleteFromCart(product.id)}
+                />
               ))
             ) : (
               <div>
@@ -49,7 +43,7 @@ class Cart extends Component {
             )}
           </div>
         </div>
-        <Summary />
+        <Summary checkout={true} />
       </div>
     );
   }
