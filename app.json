@@ -1,0 +1,15 @@
+{
+  "name": "react-redux-shop",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
